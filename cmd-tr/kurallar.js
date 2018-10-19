@@ -12,23 +12,23 @@ exports.run = function(client, message) {
       title: "**Kurallar**",
       description: "**Discord içerisinde ve diğer etkinliklerde tüm kurallar geçerlidir ve discord sunucusuna katılan herkesin kuralları okuduğu varsayılarak muamele yapılacaktır.**",
       fields: [{
-          name: "İngilizce ve Türkçe dışında dil konuşmak ve yazmak yasaktır.",
+          name: "Diller yanlızca kendi kanalında konuşulmalıdır.",
           value: "**Din, dil, ırk ayrımı yapmak yasaktır.**"
         },
         {
-          name: "Discord sunucusunda spam yapmak yasaktır.",
-          value: "**Special rank for special people rolü kişiye özeldir.**"
+          name: "Spam yapmak yasaktır.",
+          value: "**Rol alabilmek için iyi bir referansınız olması gerekir.**"
         },
         {
           name: "Herhangi bir discord sunucusunun reklamının yapılması yasaktır.",
-          value: "**Discord ve Minecraft sunucularının hepsinde küfür etmek yasaktır.**"
+          value: "**Küfür etmek yasaktır.**"
         },
         {
           name: "Sunucudaki vatandaşlara aşağılayıcı, küçük düşürücü şeyler söylemek yasaktır.",
           value: "**Siyaset yapmak yasaktır.**"
         },
         {
-          name: "1 haftadan fazla pasif kalmak sunucudan atılmanıza sebep olabilir.",
+          name: "Uzun süreli pasiflik atılmanıza sebep olabilir.",
           value: "**Kurallara uymayan kişiler sunucudan uzaklaştırılacaktır.**"
         },
       ],
