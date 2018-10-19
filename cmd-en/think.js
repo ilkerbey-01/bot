@@ -6,7 +6,7 @@ exports.run = function(client, message) {
     message.channel.send({
         embed: {
             color: 0x00AE86,
-            description: `${message.author.tag} Thinking!`,
+            description: `THONK!`,
             image: {
                 url: "https://i.postimg.cc/Ssm4TkFD/Q2973r-1.gif"
             }

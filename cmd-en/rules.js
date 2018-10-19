@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
 
-exports.run = function(client, message) {
-
+exports.run = function (client, message) {
+if (message.channel.id == '501343970761113602')
     message.channel.send({embed: {
       color: 3447003,
       author: {
@@ -38,7 +38,8 @@ exports.run = function(client, message) {
         text: "by ilker arıcı"
       }
     }
-  })
+        })
+else message.channel.send('Please use this command in english channel')
 };
 exports.conf = {
   enabled: true, 

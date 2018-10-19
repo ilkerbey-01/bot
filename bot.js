@@ -154,25 +154,16 @@ client.on('message', msg => {
 	}
 });
 
-
-
-client.on("guildMemberAdd", member => {
-	
-	var channel = member.guild.channels.find("name", "giriş-çıkış");
-	if (!channel) return;
-	
-	var role = member.guild.roles.find("name", "üye");
-	if (!role) return;
-	
-	member.addRole(role); 
-	
-	channel.send(member + " artık " + role + " rolü ile aramızda");
-	
-	member.send("Aramıza hoş geldin! Artık @üye rolüne sahipsin!")
-	
+client.on('message', msg => {
+    if (msg.content.toLowerCase() === 'hi') {
+        if (!msg.guild.member(msg.author).hasPermission("BAN_MEMBERS")) {
+            msg.author.sendMessage('Hello Welcome! ^^');
+        } else {
+            msg.reply('Hello Welcome! ^^');
+        }
+    }
 });
 
-////////////////////////
 
 client.elevation = message => {
   if(!message.guild) {
