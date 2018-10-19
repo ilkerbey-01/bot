@@ -28,9 +28,8 @@ exports.run = function(client, message) {
           value: "**Please do not discuss politics in this server.**"
         },
         {
-          name: "If you remain inactive and offline for extended periods of time, you will be kicked from the server
-.",
-          value: "**Click your flag if you agree with these rules.**"
+          name: "If you remain inactive and offline for extended periods of time, you will be kicked from the server.",
+          value: "**Click accept button if you agree these rules.**"
         },
       ],
       timestamp: new Date(),
