@@ -25,10 +25,6 @@ exports.run = function (client, message) {
                 value: "Shows your profile photo!"
             },
             {
-                name: "!doru",
-                value: "A horse named as TRU"
-            },
-            {
                 name: "!emoji",
                 value: "Tell what you think with emojis!"
             },
