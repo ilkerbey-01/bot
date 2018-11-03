@@ -6,7 +6,7 @@ exports.run = async (client, message) => {
     let dönme = await message.channel.send({
         embed: {
             color: 0x00AE86,
-            description: `${message.author.tag} bir stres çarkı çevirdi!`,
+            description: `${message.author.tag} turned a fidget spinner!`,
             image: {
                 url: "https://i.imgur.com/KJJxVi4.gif"
             }
@@ -18,7 +18,7 @@ exports.run = async (client, message) => {
         dönme.edit({
             embed: {
                 color: 0x00AE86,
-                description: `${message.author.tag}, stres çarkın ${bitiş.toFixed(2)} saniye döndü.`
+                description: `${message.author.tag}, your fidget spinner  turned ${bitiş.toFixed(2)} seconds.`
             }
         });
     }, 5 * 1000);

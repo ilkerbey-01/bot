@@ -14,8 +14,8 @@ const stripIndents = require('common-tags').stripIndents
             }
 
             const embed = new Discord.RichEmbed()
-            .addField('Soru', soru)
-            .addField('Cevap', cevap)
+            .addField('Question', soru)
+            .addField('Answer', cevap)
     
             message.channel.send(embed)
      }
