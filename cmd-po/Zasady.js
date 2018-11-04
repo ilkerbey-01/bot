@@ -42,7 +42,7 @@ exports.run = function (client, message) {
 exports.conf = {
   enabled: true, 
   guildOnly: true, 
-  aliases: [],
+  aliases: ['zasady'],
   permLevel: 0 
 };
 
