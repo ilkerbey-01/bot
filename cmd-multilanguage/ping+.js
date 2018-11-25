@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 
 exports.run = function(client, message) {
 
-    message.channel.send("My ping **" + client.ping + "** ms!");
+    message.channel.send("PONG. " + client.ping + "** ms!");
 };
 
 exports.conf = {

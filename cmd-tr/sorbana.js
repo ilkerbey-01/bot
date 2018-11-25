@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 
 const cevaplar = [
-    "yes",
-    "no",
-    "maybe",
-    "ask me later",
-    "no way"
+    "evet",
+    "hayir",
+    "belki",
+    "sonra sor",
+    "mumkun degil",
+    "asla"
 ];
 
 exports.run = function(client, message, args) {
@@ -13,7 +14,7 @@ exports.run = function(client, message, args) {
 
     var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];
 
-    if(!soru) return message.reply('Ask a question. **True Usage**: !8ball <question>')
+    if(!soru) return message.reply('Bir soru sor. **True Usage**: !sorbana <question>')
     else message.channel.send(cevap)
 
 };  
@@ -26,7 +27,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: '8ball', 
-  description: 'Magical 8ball will answer your questions',
-  usage: '8ball <question>'
+  name: 'sorbana', 
+  description: 'Sorbana ile bota istediðini sor.',
+  usage: 'sorbana <soru>'
 };
