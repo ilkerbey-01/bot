@@ -4,6 +4,7 @@ const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
+const rules = require('discord-embed-maker');
 const kurallar = require('discord-embed-maker');
 require('./util/eventLoader')(client);
 
@@ -313,19 +314,39 @@ var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.on('warn', e => {
   console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
 });
-
 client.login(ayarlar.token);
-kurallar.addField('Din, dil, ırk ayrımı yapmak yasaktır.', 'Spam yapmak yasaktır.')
-kurallar.addField('Rol alabilmek için iyi bir referansınız olması gerekir.','Herhangi bir discord sunucusunun reklamının yapılması yasaktır.')
-kurallar.addField('Küfür etmek yasaktır.', 'Discord içerisinde ve diğer etkinliklerde tüm kurallar geçerlidir ve discord sunucusuna katılan herkesin kuralları okuduğu varsayılarak muamele yapılacaktır.')
-kurallar.addField('Sunucudaki vatandaşlara aşağılayıcı, küçük düşürücü şeyler söylemek yasaktır.', 'Siyaset yapmak yasaktır.')
-kurallar.addField('Uzun süreli pasiflik atılmanıza sebep olabilir.', 'Kurallara uymayan kişiler sunucudan uzaklaştırılacaktır.')
-kurallar.setFooter('Made by ilkerbey')
-kurallar.setAuthor(`Kurallar`);
-kurallar.setColor(0x88f7f7);
-client.on('message', (message) => {
-    if (message.content === '!kurallar') {
-        message.channel.send({ embed: kurallar });
-    }
-})
+/////////////// TR KURALLAR ///////////////
+{
+    kurallar.addField('Din, dil, ırk ayrımı yapmak yasaktır.', 'Spam yapmak yasaktır.')
+    kurallar.addField('Rol alabilmek için iyi bir referansınız olması gerekir.', 'Herhangi bir discord sunucusunun reklamının yapılması yasaktır.')
+    kurallar.addField('Küfür etmek yasaktır.', 'Discord içerisinde ve diğer etkinliklerde tüm kurallar geçerlidir ve discord sunucusuna katılan herkesin kuralları okuduğu varsayılarak muamele yapılacaktır.')
+    kurallar.addField('Sunucudaki vatandaşlara aşağılayıcı, küçük düşürücü şeyler söylemek yasaktır.', 'Siyaset yapmak yasaktır.')
+    kurallar.addField('Uzun süreli pasiflik atılmanıza sebep olabilir.', 'Kurallara uymayan kişiler sunucudan uzaklaştırılacaktır.')
+    kurallar.setFooter('Made by ilkerbey')
+    kurallar.setAuthor(`Kurallar`);
+    kurallar.setColor(0x88f7f7);
+    client.on('message', (message) => {
+        if (message.content === '!kurallar') {
+            message.channel.send({ embed: kurallar });
+        }
+    })
+}
+//////////////////////////////
 
+/////////////// EN RULES ///////////////
+{
+    rules.addField('In this server, you must read the rules and follow them. Admins assume you read them', 'You must use the language you speak natively.')
+    rules.addField('Religion, race, and language discrimination isnt allowed.', 'Spam isnt alloweed.')
+    rules.addField('Only people who are friends get certain roles.', 'Advertising isnt allowed.')
+    rules.addField('Swearing isnt allowed in excessive amounts.', 'Any way of scam isnt alloweed')
+    rules.addField('Being rude to peoples isnt alloweed.', 'Please do not discuss politics in this server.')
+    rules.addField('If you remain inactive and offline for extended periods of time, you will be kicked from the server.', 'Click accept button if you agree these rules.')
+    rules.setFooter('Made by ilkerbey')
+    rules.setAuthor('Rules');
+    rules.setColor(0x88f7f7);
+    client.on('message', (message) => {
+        if (message.content === '!rules') {
+            message.channel.send({ embed: rules });
+        }
+    })
+}
